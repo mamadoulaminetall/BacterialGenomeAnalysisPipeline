@@ -138,8 +138,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-### **Prochaine étape :**
-- Ajoutez ce fichier dans votre dépôt GitHub sous le nom **`README.md`**.
-- Mettez à jour votre dépôt en exécutant `git add .`, `git commit -m "Added detailed README"` et `git push`.
-
 Si vous avez des questions ou souhaitez plus d'informations, n'hésitez pas à me demander ! 😊
