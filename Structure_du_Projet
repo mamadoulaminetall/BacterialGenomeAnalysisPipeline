@@ -1,0 +1,23 @@
+BacterialGenomeAnalysisPipeline/
+├── Dockerfile                  # Fichier pour le déploiement Docker
+├── README.md                   # Documentation détaillée
+├── Snakefile                   # Script principal Snakemake
+├── nextflow.config             # Configuration de Nextflow (si utilisé)
+├── modules/                    # Modules de traitement
+│   ├── fastqc.nf               # Contrôle qualité (FastQC)
+│   ├── assemble_genome.nf      # Assemblage du génome (SPAdes)
+│   ├── align_sequences.nf      # Alignement des séquences (BWA)
+│   ├── annotate_genome.nf      # Annotation du génome (Prokka)
+│   ├── resistance_analysis.nf  # Analyse de la résistance (ResFinder)
+│   └── diversity_analysis.nf   # Analyse de la diversité (Roary/MUMmer)
+├── data/                       # Dossier des données d'entrée
+│   └── sample_1.fastq.gz       # Exemple de données FastQ
+├── results/                    # Dossier des résultats générés
+├── envs/                       # Environnements Conda pour chaque étape
+│   ├── fastqc.yml              # Environnement Conda pour FastQC
+│   ├── spades.yml              # Environnement Conda pour SPAdes
+│   ├── bwa.yml                 # Environnement Conda pour BWA
+│   ├── prokka.yml              # Environnement Conda pour Prokka
+│   ├── resfinder.yml           # Environnement Conda pour ResFinder
+│   └── roary.yml               # Environnement Conda pour Roary
+└── .gitignore                  # Liste des fichiers à ignorer par Git
