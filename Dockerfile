@@ -10,8 +10,14 @@ RUN apt-get update && apt-get install -y \
     prokka \
     && apt-get clean
 
-# Installer Snakemake
-RUN conda install -c bioconda snakemake
+# Spécifier une version compatible de Python
+RUN conda install -y python=3.9
+
+# Installer mamba pour une gestion efficace des dépendances
+RUN conda install -y -c conda-forge mamba
+
+# Installer Snakemake avec mamba
+RUN mamba install -y -c bioconda -c conda-forge snakemake
 
 # Copier le contenu du projet
 COPY . /workspace
